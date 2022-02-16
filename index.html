@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href= 
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div>
+      <div id="calc">
+        <div id="inputs">
+          <div id="bill">
+            <label for="bill">Bill</label>
+            <div>
+              <input name="bill" placeholder="0" class="bill">
+              <span>$</span>
+            </div>
+          </div>
+          <div id="tip">
+            <label>Select Tip %</label>
+            <select name="tip" class="tip-select">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="custom">Custom</option>
+            </select>
+          </div>
+          <div id="people">
+            <label>Number of People</label>
+            <input name="people" placeholder="0">
+            <!-- <i class="fas fa-user"></i> -->
+          </div>
+        </div>
+        <div id="results">
+          <div id="tip_amount">
+            <span>Tip Amount<br><small>/ person</small></span>
+            <span></span>
+          </div>
+          <div id="total">
+            <span>Total<br><small>/ person</small></span>
+            <span></span>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://casdrod.github.io/" target="_blank">Casey Rodriguez</a>.
+    </div>
+  </main>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

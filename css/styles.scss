@@ -1,0 +1,134 @@
+$primary: #26C0AB;
+$secondary: #00494D;
+$dark-grayish-cyan-1: #5E7A7D;
+$dark-grayish-cyan-2: #7F9C9F;
+$light-cyan-1: #C5E4E7;
+$light-cyan-2: #F4FAFA;
+$white: #fff;
+
+$flex: flex;
+
+$awesome: FontAwesome;
+
+$input-size: 24px;
+
+$width: 800px;
+$font: 'Space Mono', monospace;
+
+html, body {height:100%;margin:0}
+
+main {
+
+    height:100%;
+
+    > div:first-of-type {
+        margin:auto;
+        height:100%;
+        display:flex;
+     align-items:center;
+     background-color: $light-cyan-1;
+    }
+}
+
+#calc {
+    width: $width;
+    font-family: $font;
+    height: 400px;
+    background-color: $white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    display:flex;
+}
+
+#inputs, #total {flex:1}
+
+#inputs {
+    display: $flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > div {
+        padding:20px 10px;
+    }
+    > div label {
+        display: block;
+        width:100%
+    }
+
+    > div input {
+        padding: 10px;
+        width:90%;
+        border:none;
+        background-color: $light-cyan-2;
+        text-align:right;
+        font-family: $font;
+        font-size: $input-size;
+        border:2px solid $light-cyan-1
+    }
+    > #bill input:active {border: 2px solid $primary}
+}
+
+#bill {
+    input {
+        font-size: $input-size;
+    }
+    > div {
+        position:relative;
+    }
+
+    span {
+        position:absolute;
+        left:10px;
+        font-size: 24px;
+        top: 8px;
+        color: #7F9C9F;
+    }
+}
+
+#tip {
+    .on {
+        background-color: #5E7A7D;
+        color: #00494D;
+    }
+    option {
+        display: inline-block;
+        border: 2px solid #ccc;
+        margin: 5px 5px 5px 0;
+        padding: 5px 20px;
+        border-radius: 5px;
+        min-width: 50px;
+        text-align :center;
+        background-color: #00494D;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer
+    }
+    // option:not(:last-of-type):after {content: "%"}
+}
+
+
+#people input {
+    font-family: $awesome;
+
+    :before {
+        content: '&#xf007'
+    }
+}
+
+#results {
+    background-color: $secondary;
+    border-radius: 20px;
+    padding:20px;
+    display:flex;
+    flex-wrap:no-wrap;
+    flex-direction:column;
+    flex:1;
+
+    > div {display:flex;padding:20px 10px;justify-content:space-between}
+
+    > div span {color:$white;}
+    > div span small {color: $dark-grayish-cyan-2}
+}
+
+.reset {margin-top:auto;text-transform:uppercase;width:100%;padding:10px;border-radius:5px;background-color:$dark-grayish-cyan-1;border:none}
